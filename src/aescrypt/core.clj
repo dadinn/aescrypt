@@ -45,7 +45,9 @@
     (let [[key iv content] (rest args)]
       (decrypt key iv content))
     "genkey"
-    (genkey 256) 
+    (let [[size] (rest args)]
+      (genkey (read-string (or size "128")))) 
     "geniv"
-    (geniv 16)
+    (let [[size] (rest args)]
+      (geniv (read-string (or size "16"))))
     "Usage: encrypt, decrypt, genkey, geniv.")))
