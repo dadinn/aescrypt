@@ -1,6 +1,4 @@
 (ns aescrypt.core
-  (:require
-   [clojure.tools.cli :as cli])
   (:import
    [org.apache.commons.codec.binary Base64]
    [java.security SecureRandom]
