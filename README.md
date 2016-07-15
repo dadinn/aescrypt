@@ -19,6 +19,12 @@ using [Leiningen](http://leiningen.org/) like the following:
 	echo $encrypted
 	lein run decrypt $secret $iv $encrypted
 
+It has to be noted that the command line interface defaults the secret
+key sizes to 128 bits... this can be changed by adding key sizes like
+256 after the genkey command, but it requires the
+[Unlimited Strength JCE](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)
+jars to be installed on the host.
+
 ## License
 
 Copyright © 2016 FIXME
